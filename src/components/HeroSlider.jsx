@@ -21,13 +21,13 @@ const HeroSlider = () => {
   return (
     <Box position="relative" width="full" overflow="hidden">
       <Slider {...settings}>
-        <Box height="400px" bg="blue.500" display="flex" alignItems="center" justifyContent="center">
+        <Box height="60vh" display="flex" alignItems="center" justifyContent="center">
           <img src="/images/slide1.jpg" alt="Slide 1" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
         </Box>
-        <Box height="400px" bg="green.500" display="flex" alignItems="center" justifyContent="center">
+        <Box height="60vh" display="flex" alignItems="center" justifyContent="center">
           <img src="/images/slide2.jpg" alt="Slide 2" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
         </Box>
-        <Box height="400px" bg="red.500" display="flex" alignItems="center" justifyContent="center">
+        <Box height="60vh" display="flex" alignItems="center" justifyContent="center">
           <img src="/images/slide3.jpg" alt="Slide 3" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
         </Box>
       </Slider>
@@ -42,11 +42,14 @@ const NextArrow = (props) => {
       aria-label="Next Slide"
       icon={<FaArrowRight />}
       position="absolute"
-      right="10px"
+      right="20px"
       top="50%"
       transform="translateY(-50%)"
       zIndex="2"
       onClick={onClick}
+      bg="rgba(0, 0, 0, 0.5)"
+      _hover={{ bg: "rgba(0, 0, 0, 0.7)" }}
+      color="white"
     />
   );
 };
@@ -58,11 +61,14 @@ const PrevArrow = (props) => {
       aria-label="Previous Slide"
       icon={<FaArrowLeft />}
       position="absolute"
-      left="10px"
+      left="20px"
       top="50%"
       transform="translateY(-50%)"
       zIndex="2"
       onClick={onClick}
+      bg="rgba(0, 0, 0, 0.5)"
+      _hover={{ bg: "rgba(0, 0, 0, 0.7)" }}
+      color="white"
     />
   );
 };
